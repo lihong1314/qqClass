@@ -1,0 +1,38 @@
+<iframe name="myindex" id="myindex" src="http://htmlpreview.github.io/?https://github.com/lihong1314/qqClass/blob/master/index.html" frameborder="0" width="100%" height="100%" scrolling="no">
+</iframe>
+<style>
+    body,p{
+    	margin:0;
+    	padding:0;
+    }
+	iframe{
+		margin: 0;
+		overflow: hidden;
+	}
+</style>
+<script>
+	var myindex=document.getElementById("myindex");
+	var cw=document.documentElement.clientWidth;
+	var cy=document.documentElement.clientHeight;
+	myindex.style.width=cw+"px";
+	myindex.style.height=cy+"px";
+	window.onresize=function(){
+		cw=document.documentElement.clientWidth;
+	    cy=document.documentElement.clientHeight;
+	    myindex.style.width=cw+"px";
+	    myindex.style.height=cy+"px";
+	}
+
+    self.setInterval("clock()",2000);
+	function clock(){
+		var newwidth=document.documentElement.clientWidth;
+		var newheigh=document.documentElement.clientHeight;
+		if(cw==newwidth&&cy==newheigh){
+
+		}else{
+			myindex.style.width=newwidth+"px";
+			myindex.style.height=newheigh+"px";
+		}
+	}
+
+</script>
